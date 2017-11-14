@@ -7,7 +7,11 @@ var methods = {
     if (packArray === null) {
       throw "No values submitted";
     }
-    
+
+    if (!Array.isArray(packArray)) {
+      throw "Check your format cause this ain't no array";
+    }
+
 
   }
 
