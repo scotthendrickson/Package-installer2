@@ -42,10 +42,8 @@ var methods = {
       if (dependecy.length > 0) {
         results[package].push(dependecy);
       }
-
-      return methods.sort(results).join(", ");
-
     })
+    return methods.sort(results).join(", ");
   },
 
   sort : function(unsorted){
