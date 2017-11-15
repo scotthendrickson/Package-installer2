@@ -23,9 +23,31 @@ var methods = {
       if (valArray.length !== 2){
         throw "Invalid entry";
       }
-      
+
+      var package = valArray[0].trim();
+      var dependecy = valArray[1].trim();
+
+      if (package.length === 0){
+        throw "Invalid package entry";
+      }
+
+      if (!results[package]) {
+        results[package] = [];
+      }
+
+      if (!results[dependecy] && dependecy.length > 0) {
+        results[dependecy] = [];
+      }
+
+      if (dependecy.length > 0) {
+        results[package].push(dependecy);
+      }
     }
 
+  }
+
+  sort : function(unsorted){
+    
   }
 
 }
