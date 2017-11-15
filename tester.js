@@ -11,6 +11,6 @@ var testArray4 = ["KittenService: ", "Leetmeme: CyberPortal", "CyberPortal: Ice"
 
 // console.log(packageInstaller.data.installer(testStr));
 // console.log(packageInstaller.data.installer(testArray));
-console.log(packageInstaller.data.installer(testArray2));
-console.log(packageInstaller.data.installer(testArray3));
+// console.log(packageInstaller.data.installer(testArray2));
+// console.log(packageInstaller.data.installer(testArray3));
 console.log(packageInstaller.data.installer(testArray4));

@@ -43,7 +43,7 @@ var methods = {
         results[package].push(dependecy);
       }
 
-      return sort(results).join(", ");
+      return methods.sort(results).join(", ");
 
     })
   },
