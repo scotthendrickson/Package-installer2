@@ -9,8 +9,8 @@ var testArray2 = ["KittenService: ", "Leetmeme: CyberPortal", "CyberPortal: Ice"
 var testArray3 = ["KittenService: CamelCaser", "CamelCaser: "];
 var testArray4 = ["KittenService: ", "Leetmeme: CyberPortal", "CyberPortal: Ice", "CamelCaser: KittenService", "Fraudstream: ", "Ice: Leetmeme"];
 
-packageInstaller.data.installer(testStr);
-packageInstaller.data.installer(testArray);
-packageInstaller.data.installer(testArray2);
-packageInstaller.data.installer(testArray3);
-packageInstaller.data.installer(testArray4);
+// console.log(packageInstaller.data.installer(testStr));
+// console.log(packageInstaller.data.installer(testArray));
+console.log(packageInstaller.data.installer(testArray2));
+console.log(packageInstaller.data.installer(testArray3));
+console.log(packageInstaller.data.installer(testArray4));

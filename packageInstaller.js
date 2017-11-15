@@ -13,7 +13,7 @@ var methods = {
     }
 
     var results = [];
-    packArray.foreach(function(value) {
+    packArray.forEach(function(value) {
       if (typeof value !== 'string') {
         throw "Value is not a string";
       }
@@ -43,13 +43,39 @@ var methods = {
         results[package].push(dependecy);
       }
 
-      return results;
+      return sort(results).join(", ");
 
     })
   },
 
   sort : function(unsorted){
+    var results = [];
+    var sorted = {};
 
+    Object.keys(unsorted).forEach(function(pack){
+      subSort(pack, []);
+    });
+
+    function subSort(package, dependecies){
+      if (sorted[package]) {
+        return;
+      }
+
+      dependecies.push(package);
+
+      var pkg = unsorted[package];
+      pkg.forEach(function(dependecy) {
+        if (dependecies.indexOf(dependecy) >= 0) {
+          throw "Circular Reference";
+        }
+
+        subSort(dependecy, dependecies);
+      });
+      sorted[package] = true;
+      results.push(package);
+    }
+
+    return results;
   }
 
 }
