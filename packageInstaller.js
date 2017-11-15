@@ -13,7 +13,7 @@ var methods = {
     }
 
     var results = [];
-    packArray.foreach(function(value)) {
+    packArray.foreach(function(value) {
       if (typeof value !== 'string') {
         throw "Value is not a string";
       }
@@ -42,12 +42,14 @@ var methods = {
       if (dependecy.length > 0) {
         results[package].push(dependecy);
       }
-    }
 
-  }
+      return results;
+
+    })
+  },
 
   sort : function(unsorted){
-    
+
   }
 
 }
